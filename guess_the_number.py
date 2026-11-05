@@ -11,6 +11,8 @@
 #   - while loop     : repeat code until we say stop
 #   - if/elif/else   : choose what to do based on a condition
 #   - f-strings      : put variables inside text with {curly braces}
+#   - try/except     : catch an error instead of crashing (added in S2)
+#   - continue       : skip to the next loop round
 
 # "random" is a built-in module for picking random numbers.
 import random
@@ -26,7 +28,27 @@ print("I'm thinking of a number between 1 and 10.")
 # "while True" loops forever... until we hit "break" below.
 while True:
     # input() always gives back text, so int() converts it to a number.
-    guess = int(input("Your guess: "))
+    # But int("abc") crashes with a ValueError. To handle that, we wrap it:
+    #
+    #   Python:  try: ... except ValueError: ...
+    #   PHP:     try { ... } catch (ValueError $e) { ... }
+    #   Ruby:    begin ... rescue ArgumentError ... end
+    #   JS:      try { ... } catch (e) { ... }
+    #
+    # Note for JS: parseInt("abc") doesn't throw, it quietly returns NaN.
+    # Python is stricter and raises an error you have to handle.
+    # Also, JS catch grabs every error; Python's "except ValueError" only
+    # catches that one type (like PHP/Ruby).
+    #
+    # Only the risky line goes inside "try". If it fails, Python jumps
+    # straight to the matching "except" block.
+    try:
+        guess = int(input("Your guess: "))
+    except ValueError:
+        print("That's not a number. Try again.")
+        # "continue" skips the rest of this loop and starts the next round
+        # (same as PHP/JS continue, Ruby's next). So a bad input isn't counted.
+        continue
 
     # Same as: attempts = attempts + 1
     attempts += 1
