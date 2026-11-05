@@ -1,7 +1,7 @@
-# guess_the_number.py
+# 01_guess_the_number.py
 # My first Python program: a number guessing game.
 #
-# How to run it:  python3 guess_the_number.py
+# How to run it:  python3 01_guess_the_number.py
 #
 # Python basics used here:
 #   - import         : load extra tools that come with Python
