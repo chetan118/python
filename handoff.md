@@ -10,14 +10,15 @@
 - **S1 `01_guess_the_number.py`:** import, variables, print/input, `int()`, while/break, if/elif/else, f-strings, `+=` (no `++`)
 - **S2 warm-up (in `01_`):** `try/except ValueError` (vs try/catch, begin/rescue), `continue` (Ruby `next`)
 - **S2 `02_shopping_list.py`:** `def` (must be defined before it's called, no hoisting), explicit `return` (no implicit return like Ruby, else `None`), lists + `.append()`, `for x in list`, `len()`/`sum()`, `float()`, `{x:.2f}`, empty list is falsy (like PHP; truthy in Ruby/JS); built-ins need no import, only modules do
+- **S3 `03_chat_log.py`:** dicts (= PHP assoc array / Ruby Hash / JS object), keys must be quoted, `d["k"]` raises KeyError if missing (no null/nil/undefined), `.get(k, default)` (like PHP `??`), `in` checks keys, `.items()` + `for k, v in`, dict as counter, list of dicts = AI chat `messages` shape, `.strip()`/`.lower()`, `", ".join(...)` (method on the separator), no dot access on dicts, ALL_CAPS = constant by convention only. Q&A: f-strings can hold any expression, e.g. `{bot_reply(text)}`, but store a result you use twice (AI calls cost money and aren't repeatable); **function** `len(x)` vs **method** `x.lower()` (like PHP `strtolower($s)` vs `$obj->method()`)
 - **vs PHP/Ruby:** indentation = blocks; `True`/`False`/`None` case-sensitive; strict types (`int("abc")` → ValueError, no type juggling); `'` = `"`, interpolation only in f-strings (like JS template literals `` `${x}` ``)
 - **vs JS:** `None` replaces both `null` and `undefined`; `==` is already strict (no `===`); `parseInt("abc")` → NaN in JS, but Python raises an error
 
 ## Tasks
 - [x] S1: guessing game, pushed
 - [x] S2: try/except warm-up + `02_shopping_list.py`, pushed. Also: renamed files to `01_`/`02_`, added AI-engineering roadmap (S6–S10)
-- [ ] **NEXT** S3: dictionaries (tie-in: AI model messages are a list of dicts, e.g. `[{"role": "user", "content": "Hi"}]`)
-- [ ] S4: read/write files
+- [x] S3: dictionaries, `03_chat_log.py` (pretend chatbot building an AI-style messages list)
+- [ ] **NEXT** S4: read/write files (tie-in: save the S3 chat log to a file and load it back)
 - [ ] S5: classes
 - [ ] S6: modules and imports (first folder session: `06_modules/main.py` + `helpers.py`)
 - [ ] S7: `pip` + virtual environments (vs Composer / Bundler / npm)
