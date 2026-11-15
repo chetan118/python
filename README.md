@@ -15,11 +15,17 @@ Each session is one small program (about 10 minutes). The explanations live in t
 
 ## Running
 
-Requires Python 3.
+Requires Python 3. Run any session from the repo root:
 
 ```bash
-python3 04_save_chat_log.py
+python3 01_guess_the_number.py
 ```
+
+`04_save_chat_log.py` writes `chat_log.txt` to the folder you run it from, because relative paths are relative to the current working directory, not to the script.
+
+## How I practise
+
+After each session I make a copy of the program that keeps only the comments. Then I retype the code from memory and `diff` it against the original to see what I forgot. These copies stay on my machine and aren't committed.
 
 ## Roadmap
 
