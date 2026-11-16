@@ -11,8 +11,9 @@
 - **S2 warm-up (in `01_`):** `try/except ValueError` (vs try/catch, begin/rescue), `continue` (Ruby `next`)
 - **S2 `02_shopping_list.py`:** `def` (must be defined before it's called, no hoisting), explicit `return` (no implicit return like Ruby, else `None`), lists + `.append()`, `for x in list`, `len()`/`sum()`, `float()`, `{x:.2f}`, empty list is falsy (like PHP; truthy in Ruby/JS); built-ins need no import, only modules do
 - **S3 `03_chat_log.py`:** dicts (= PHP assoc array / Ruby Hash / JS object), keys must be quoted, `d["k"]` raises KeyError if missing (no null/nil/undefined), `.get(k, default)` (like PHP `??`), `in` checks keys, `.items()` + `for k, v in`, dict as counter, list of dicts = AI chat `messages` shape, `.strip()`/`.lower()`, `", ".join(...)` (method on the separator), no dot access on dicts, ALL_CAPS = constant by convention only. Q&A: f-strings can hold any expression, e.g. `{bot_reply(text)}`, but store a result you use twice (AI calls cost money and aren't repeatable); **function** `len(x)` vs **method** `x.lower()` (like PHP `strtolower($s)` vs `$obj->method()`)
-- **Recall practice (before S4):** retyped S1 and S2 from comments-only copies in `practice/` (ignored locally via `.git/info/exclude`, not committed). S1: forgot the `input("Your guess: ")` prompt text. S2: matched. 03 and 04 practice files made, not done yet.
+- **Recall practice (S1–S5):** retyped S1 and S2 from comments-only copies in `practice/` (ignored locally via `.git/info/exclude`, not committed). S1: forgot the `input("Your guess: ")` prompt text. S2: matched. S3 + S4 (2026-11-16): both matched exactly. S5: matched in the end; slips on the way: wrong filename `log_file.txt` (the `except FileNotFoundError: pass` hid it, and the program loaded an empty log), and `def save(self, log)`, but the object already holds its messages, so it's just `save(self)`.
 - **S4 `04_save_chat_log.py`:** `open(path, mode)` with `"r"`/`"w"` (empties the file)/`"a"`, `with ... as f:` closes the file for you (like a Ruby `File.open` block, unlike PHP `fopen`/`fclose`), `encoding="utf-8"`, `f.write()` adds no `\n`, `for line in f` + `.rstrip("\n")`, `f.read()` = `file_get_contents`, `FileNotFoundError`, `pass`, `.split(": ", 1)` (max CUTS; PHP/Ruby limit = max PARTS), unpacking `a, b = [x, y]`, relative paths are relative to the cwd. Plain text breaks on newlines, so JSON comes in S8.
+- **S5 `05_chat_log_class.py`:** `class ChatLog:` (PascalCase, indented block, no braces/`end`), `__init__` = constructor (`__construct`/`initialize`/`constructor`), returns nothing, explicit `self` as the first param of every method (PHP `$this`, Ruby/JS implicit), attributes made by assigning `self.x = ...` (no declarations; forgetting `self.` makes a local), no `new`: `ChatLog(path)`, `log.load()` = `ChatLog.load(log)`, dunder methods = PHP magic methods: `len(x)` calls `x.__len__()`, `__str__` = `__toString`/`to_s`. Same `chat_log.txt` format as S4, so it loads the S4 log. Payoff: S8 can switch save/load to JSON without touching the main program.
 - **vs PHP/Ruby:** indentation = blocks; `True`/`False`/`None` case-sensitive; strict types (`int("abc")` → ValueError, no type juggling); `'` = `"`, interpolation only in f-strings (like JS template literals `` `${x}` ``)
 - **vs JS:** `None` replaces both `null` and `undefined`; `==` is already strict (no `===`); `parseInt("abc")` → NaN in JS, but Python raises an error
 
@@ -21,9 +22,10 @@
 - [x] S2: try/except warm-up + `02_shopping_list.py`, pushed. Also: renamed files to `01_`/`02_`, added AI-engineering roadmap (S6–S10)
 - [x] S3: dictionaries, `03_chat_log.py` (pretend chatbot building an AI-style messages list)
 - [x] S4: read/write files, `04_save_chat_log.py` (S3 chatbot that saves the log to `chat_log.txt` and loads it back). Also added `.gitignore` (`chat_log.txt`); `practice/` is in the local `.git/info/exclude` instead
-- [ ] **NEXT** S5: classes (tie-in idea: a `ChatLog` class wrapping the S4 save/load functions)
-- [ ] Optional: finish `practice/03_chat_log.py` and `practice/04_save_chat_log.py`
-- [ ] S6: modules and imports (first folder session: `06_modules/main.py` + `helpers.py`)
+- [x] Recall practice for 03 + 04: both matched exactly
+- [x] S5: classes, `05_chat_log_class.py` (S4 save/load functions wrapped in a `ChatLog` class)
+- [x] Recall practice for 05: matched
+- [ ] **NEXT** S6: modules and imports (first folder session: `06_modules/main.py` + `helpers.py`; tie-in: move `ChatLog` into its own module)
 - [ ] S7: `pip` + virtual environments (vs Composer / Bundler / npm)
 - [ ] S8: JSON + calling a web API over HTTP
 - [ ] S9: type hints (vs PHP type declarations)

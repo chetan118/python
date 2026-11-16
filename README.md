@@ -12,6 +12,7 @@ Each session is one small program (about 10 minutes). The explanations live in t
 | 2 | [`02_shopping_list.py`](02_shopping_list.py) | functions, `return`, lists, `for` loops, `len()`/`sum()` |
 | 3 | [`03_chat_log.py`](03_chat_log.py) | dictionaries, `.get()`, `.items()`, a list of dicts (the shape AI chat APIs use) |
 | 4 | [`04_save_chat_log.py`](04_save_chat_log.py) | `open()`, `with`, read/write modes, `FileNotFoundError`, `.split()`, unpacking |
+| 5 | [`05_chat_log_class.py`](05_chat_log_class.py) | classes, `__init__`, `self`, methods, `__len__`/`__str__` |
 
 ## Running
 
@@ -29,6 +30,6 @@ After each session I make a copy of the program that keeps only the comments. Th
 
 ## Roadmap
 
-Classes → modules → `pip` and virtual environments → JSON and web APIs → type hints → a first AI model call.
+Modules → `pip` and virtual environments → JSON and web APIs → type hints → a first AI model call.
 
 Progress and notes are tracked in [`handoff.md`](handoff.md).
