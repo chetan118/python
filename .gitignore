@@ -1,2 +1,5 @@
 # Data file written by 04_save_chat_log.py
 chat_log.txt
+
+# Compiled copies of imported modules (created by 06_modules and later)
+__pycache__/

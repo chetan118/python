@@ -13,6 +13,7 @@ Each session is one small program (about 10 minutes). The explanations live in t
 | 3 | [`03_chat_log.py`](03_chat_log.py) | dictionaries, `.get()`, `.items()`, a list of dicts (the shape AI chat APIs use) |
 | 4 | [`04_save_chat_log.py`](04_save_chat_log.py) | `open()`, `with`, read/write modes, `FileNotFoundError`, `.split()`, unpacking |
 | 5 | [`05_chat_log_class.py`](05_chat_log_class.py) | classes, `__init__`, `self`, methods, `__len__`/`__str__` |
+| 6 | [`06_modules/`](06_modules/) | modules, `import` / `from ... import` / `as`, standard library, `if __name__ == "__main__":` |
 
 ## Running
 
@@ -20,6 +21,7 @@ Requires Python 3. Run any session from the repo root:
 
 ```bash
 python3 01_guess_the_number.py
+python3 06_modules/main.py   # folder sessions: run main.py
 ```
 
 `04_save_chat_log.py` writes `chat_log.txt` to the folder you run it from, because relative paths are relative to the current working directory, not to the script.
@@ -30,6 +32,6 @@ After each session I make a copy of the program that keeps only the comments. Th
 
 ## Roadmap
 
-Modules → `pip` and virtual environments → JSON and web APIs → type hints → a first AI model call.
+`pip` and virtual environments → JSON and web APIs → type hints → a first AI model call.
 
 Progress and notes are tracked in [`handoff.md`](handoff.md).
