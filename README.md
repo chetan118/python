@@ -24,7 +24,7 @@ python3 01_guess_the_number.py
 python3 06_modules/main.py   # folder sessions: run main.py
 ```
 
-`04_save_chat_log.py` writes `chat_log.txt` to the folder you run it from, because relative paths are relative to the current working directory, not to the script.
+Sessions 4–6 all save to and load from the same `chat_log.txt`, so a chat saved in one session loads in the next. The file goes in the folder you run from, because relative paths are relative to the current working directory, not to the script.
 
 ## How I practise
 
