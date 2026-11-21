@@ -1,0 +1,6 @@
+# Packages for this repo. Install them into the venv with:
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+# "==" pins an exact version, so everyone gets the same one.
+
+python-dotenv==1.2.4

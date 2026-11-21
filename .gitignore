@@ -3,3 +3,9 @@ chat_log.txt
 
 # Compiled copies of imported modules (created by 06_modules and later)
 __pycache__/
+
+# Virtual environment (S7): rebuild it with pip install -r requirements.txt
+.venv/
+
+# Secrets and local settings (S7). .env.example is committed instead.
+.env
