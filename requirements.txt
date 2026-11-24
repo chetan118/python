@@ -2,5 +2,8 @@
 #   source .venv/bin/activate
 #   pip install -r requirements.txt
 # "==" pins an exact version, so everyone gets the same one.
+# Only list what our code imports. pip installs their own dependencies too
+# (requests brings urllib3, certifi, idna, charset-normalizer), like Composer.
 
 python-dotenv==1.2.4
+requests==2.34.2

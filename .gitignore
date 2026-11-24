@@ -1,5 +1,6 @@
-# Data file shared by sessions 04-06 (the saved chat log)
+# Saved chat logs: chat_log.txt is shared by sessions 04-06, chat_log.json is S8
 chat_log.txt
+chat_log.json
 
 # Compiled copies of imported modules (created by 06_modules and later)
 __pycache__/
