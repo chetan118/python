@@ -7,3 +7,7 @@
 
 python-dotenv==1.2.4
 requests==2.34.2
+
+# S9: the type checker. Our code doesn't import it; you run it as a command
+# (mypy 09_type_hints.py), like PHPStan.
+mypy==2.4.1

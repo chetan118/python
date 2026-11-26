@@ -16,6 +16,7 @@ Each session is one small program (about 10 minutes). The explanations live in t
 | 6 | [`06_modules/`](06_modules/) | modules, `import` / `from ... import` / `as`, standard library, `if __name__ == "__main__":` |
 | 7 | [`07_packages.py`](07_packages.py) | `pip`, virtual environments, `requirements.txt`, `.env` files, `os.environ` |
 | 8 | [`08_json_api/`](08_json_api/) | JSON (`json.dump`/`load`/`dumps`/`loads`), HTTP POST with `requests`, `timeout`, `raise_for_status()`, `RequestException` |
+| 9 | [`09_type_hints.py`](09_type_hints.py) | type hints, `list[...]`/`dict[...]`, `X \| None`, `Literal`, `TypedDict`, `Any`, checking with mypy |
 
 ## Running
 
@@ -36,7 +37,7 @@ cp .env.example .env                # once, then edit .env
 python 07_packages.py
 ```
 
-Sessions 4–6 all save to and load from the same `chat_log.txt`, so a chat saved in one session loads in the next. Session 8 switches to `chat_log.json`. Each file goes in the folder you run from, because relative paths are relative to the current working directory, not to the script.
+Sessions 4–6 all save to and load from the same `chat_log.txt`, so a chat saved in one session loads in the next. Session 8 switches to `chat_log.json`, and session 9 writes its own `typed_chat_log.json`. Each file goes in the folder you run from, because relative paths are relative to the current working directory, not to the script.
 
 ## How I practise
 
@@ -44,6 +45,6 @@ After each session I make a copy of the program that keeps only the comments. Th
 
 ## Roadmap
 
-Type hints → a first AI model call.
+A first AI model call.
 
 Progress and notes are tracked in [`handoff.md`](handoff.md).

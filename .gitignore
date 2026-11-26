@@ -1,9 +1,14 @@
-# Saved chat logs: chat_log.txt is shared by sessions 04-06, chat_log.json is S8
+# Saved chat logs: chat_log.txt is shared by sessions 04-06, chat_log.json is S8,
+# typed_chat_log.json is S9
 chat_log.txt
 chat_log.json
+typed_chat_log.json
 
 # Compiled copies of imported modules (created by 06_modules and later)
 __pycache__/
+
+# mypy's cache of earlier checks (S9)
+.mypy_cache/
 
 # Virtual environment (S7): rebuild it with pip install -r requirements.txt
 .venv/
